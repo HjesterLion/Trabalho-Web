@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="carousel.css" rel="stylesheet">
+    <link href="jogos.css" rel="stylesheet">
+
+    <script>
+        function exibeAlert() {
+
+            var nome = formulario.nome.value;
+            var email = formulario.email.value;
+            var escolha = formulario.escolha.value;
+            var texto = formulario.texto.value;
+            if (nome != "" && email != "" && escolha != "" && texto != "") {
+                confirm("Mensagem enviada com sucesso")
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Tudo Sobre Jogos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false">Jogos</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="GodOfWar.html">God Of War</a></li>
+                                <li><a class="dropdown-item" href="FinalFantasy.html">Final Fantasy XV</a></li>
+                                <li><a class="dropdown-item" href="Cod.html">Call Of Duty: Vanguard</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Formulario.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                    src="https://cdn.cnt.org.br/diretorioVirtualPrd/4e775784-1387-456a-9120-0ad38053e797_CorteWide.png"
+                    alt="faleConosco">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1 id="faleConosco"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=container>
+
+            <form class="form" name="formulario" method="POST" action="my.php">
+
+                <div class="row">
+                    <h6>TODOS OS REQUISITOS QUE TIVEREM * SÃO OBRIGATÓRIOS</h6><br>
+                    <div class="col">
+                        <label for="Nome">Nome*</label>
+                        <input type="text" name="nome" class="form-control" placeholder="Nome" required>
+                    </div>
+                    <div class="col">
+                        <label for="Sorenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" class="form-control" placeholder="Sobrenome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputEmail1">Email*</label>
+                        <input type="email" name="email" class="form-control" id="InputEmail1"
+                            aria-describedby="emailHelp" placeholder="xxxxx@hotmail.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Escolhas">Escolha o motivo de seu contato*</label><br>
+                    <select name="escolha" class="custom-select" required>
+                        <option value="">Escolha*</option>
+                        <option value="Sujestão de jogos">Sugestão de jogos</option>
+                        <option value="Duvidas">Duvidas</option>
+                        <option value="Feedback sobre o site">Feedback sobre o site</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="validationTextarea">Texto*</label>
+                    <textarea class="form-control" name="texto" id="validationTextarea"
+                        placeholder="Escreva detalhadamente o motivo do seu contato" required></textarea>
+                </div>
+
+                <button type="submit" onclick="exibeAlert()" class="btn btn-primary">Enviar</button>
+            </form>
+
+    </main>
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Voltar ao topo</a></p>
+        <p>&copy; 2021–2021 Company, Inc. </p>
+    </footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
